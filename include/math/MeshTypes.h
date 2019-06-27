@@ -32,7 +32,7 @@ namespace hpl {
 		cVector3f normal;
 		bool facingLight;
 
-		cTriangleData(){}
+		cTriangleData() : facingLight(false) {}
 		cTriangleData(const cVector3f& avNormal)
 		{
 			normal = avNormal;
@@ -51,8 +51,8 @@ namespace hpl {
 		mutable int tri1, tri2;
 		bool invert_tri2;
 
-		cTriEdge(){}
-		cTriEdge(int alPoint1, int alPoint2, int alTri1, int alTri2)
+		cTriEdge() : point1(0), point2(0), tri1(0), tri2(0), invert_tri2(false) {}
+		cTriEdge(int alPoint1, int alPoint2, int alTri1, int alTri2) : invert_tri2(false)
 		{
 			point1 = alPoint1;
 			point2 = alPoint2;

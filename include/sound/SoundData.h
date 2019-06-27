@@ -29,9 +29,14 @@ namespace hpl {
 
 	class iSoundData : public iResourceBase
 	{
+	protected:
+		bool mbStream;
+		bool mbLoopStream;
+		cSoundManager* mpSoundManger;
+
 	public:
 		iSoundData(tString asName, bool abStream) : iResourceBase(asName, 0),
-		mpSoundManger(NULL), mbStream(abStream){}
+		mpSoundManger(NULL), mbStream(abStream), mbLoopStream(false) {}
 
 		virtual ~iSoundData(){}
 
@@ -53,11 +58,6 @@ namespace hpl {
 		void SetSoundManager(cSoundManager* apSoundManager){
 			mpSoundManger = apSoundManager;
 		}
-
-	protected:
-		bool mbStream;
-		bool mbLoopStream;
-		cSoundManager* mpSoundManger;
 	};
 };
 #endif // HPL_SOUND_DATA_H

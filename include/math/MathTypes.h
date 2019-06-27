@@ -57,7 +57,10 @@ namespace hpl {
 	public:
 		float max,min,val, up_speed, down_speed;
 
-		cLinearOscillation(){}
+		cLinearOscillation() : add(false), val(0), up_speed(0), down_speed(0) {
+			max = 0;
+			min = 0;
+		}
 		cLinearOscillation(float afMin, float afMax, float afVal, float afUpSpeed,float afDownSpeed)
 		{
 			SetUp(afMin,afMax,afVal, afUpSpeed, afDownSpeed);

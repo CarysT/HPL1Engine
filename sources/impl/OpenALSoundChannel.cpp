@@ -31,7 +31,7 @@ namespace hpl {
 	//-----------------------------------------------------------------------
 
 	cOpenALSoundChannel::cOpenALSoundChannel(iSoundData* apData, int alChannel,cSoundManager* apSoundManger)
-	: iSoundChannel(apData, apSoundManger)
+	: iSoundChannel(apData, apSoundManger), mlDefaultFreq(0)
 	{
 		mlChannel = alChannel;
 

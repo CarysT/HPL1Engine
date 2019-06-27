@@ -116,18 +116,20 @@ namespace hpl {
 	class cVertexBonePair
 	{
 	public:
+		unsigned int vtxIdx;
+		unsigned int boneIdx;
+		float weight;
 		cVertexBonePair(unsigned int aVtx, unsigned int aBone, float aW)
 		{
 			vtxIdx = aVtx;
 			boneIdx = aBone;
 			weight = aW;
 		}
-		cVertexBonePair(){}
-
-
-		unsigned int vtxIdx;
-		unsigned int boneIdx;
-		float weight;
+		cVertexBonePair() {
+			vtxIdx = 0;
+			boneIdx = 0;
+			weight = 0.0f;
+		}
 	};
 
 

@@ -269,7 +269,7 @@ namespace hpl {
 	typedef struct cSerializeSavedClass
 	{
 	public:
-		cSerializeSavedClass(){}
+		cSerializeSavedClass() : msName(""), msParentName(""), mpMemberFields(), mlSize(0), mpCreateFunc(){}
 		cSerializeSavedClass(const char *asName,const char* asParent,
 							cSerializeMemberField* apMemberFields, size_t alSize,
 							iSerializable *(*apCreateFunc)());

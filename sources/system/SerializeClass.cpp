@@ -915,6 +915,7 @@ namespace hpl {
 				}
 				else {
 					hplDelete(pValuePtr);
+					pValuePtr = new iSerializable*;
 					*pValuePtr = pSavedClass->mpCreateFunc();
 				}
 

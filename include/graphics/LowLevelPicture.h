@@ -27,7 +27,7 @@ namespace hpl {
 	class iLowLevelPicture
 	{
 	public:
-		iLowLevelPicture(tString asType): msType(asType) {}
+		iLowLevelPicture(tString asType): msType(asType), mlHeight(0), mlWidth(0), mlDepth(0), mlBpp(0) {}
 		virtual ~iLowLevelPicture(){}
 
 		tString GetType(){return msType;}
